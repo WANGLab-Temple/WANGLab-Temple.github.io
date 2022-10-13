@@ -1,0 +1,63 @@
+// Styling for the navbar
+#mainNav {
+    position: absolute;
+    border-bottom: 1px solid $gray-200;
+    background-color: white;
+    font-family: $headings-font-family;
+    width: 100%;
+
+    .navbar-brand {
+        font-weight: 800;
+        color: $white;
+    }
+
+    .navbar-toggler {
+        font-size: 12px;
+        font-weight: 800;
+        padding: 10px;
+        text-transform: uppercase;
+        color: $gray-600;
+    }
+
+    .navbar-nav {
+        >li.nav-item {
+            >a {
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        border-bottom: 1px solid transparent;
+        border-bottom-color: rgb(240, 240, 240);
+        position: fixed;
+        background: white;
+        height: 65px;
+
+        .navbar-brand {
+            padding: 10px 20px;
+            color: $white;
+            &:focus,
+            &:hover {
+                color: fade-out($white, .2);
+            }
+        }
+
+        .navbar-nav {
+            >li.nav-item {
+                >a {
+                    padding: 10px 20px;
+                    color: $gray-600;
+
+                    &:focus,
+                    &:hover {
+                        color: fade-out($gray-500, .2);
+                    }
+                }
+            }
+        }
+    }
+}

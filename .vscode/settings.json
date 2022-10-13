@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.ttml": "xml",
+        "*.ttss": "css"
+    },
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#2E2F15",
+        "titleBar.activeBackground": "#41421D",
+        "titleBar.activeForeground": "#FBFBF6"
+    }
+}
