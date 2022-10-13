@@ -5,7 +5,7 @@ author:             WANGLab
 baseurl:            ""
 url:                "https://AThree3.github.io"
 root:               "/AThree3.github.io"
-favicon:            'assets/icons/logo.png'
+favicon:            './assets/icons/logo.png'
 
 # Social Profiles
 
