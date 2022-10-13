@@ -2,8 +2,9 @@ title:              WANGLab
 email:              zijietang0316@gmail.com
 description:        WANGLab-temple university
 author:             WANGLab
-baseurl:            "/WANGLab"
+baseurl:            ""
 url:                "https://AThree3.github.io"
+root:               "/AThree3.github.io"
 favicon:            'assets/icons/logo.png'
 
 # Social Profiles
