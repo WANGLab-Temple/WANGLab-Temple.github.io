@@ -8,10 +8,20 @@
 
     .navbar-brand {
         font-weight: 800;
+        width: "220px";
+        height: "50px";
         color: $white;
     }
 
     .navbar-toggler {
+        font-size: 12px;
+        font-weight: 800;
+        padding: 10px;
+        text-transform: uppercase;
+        color: $gray-600;
+    }
+
+    .navbar-toggler-right{
         font-size: 12px;
         font-weight: 800;
         padding: 10px;
@@ -30,12 +40,17 @@
         }
     }
 
+    @media only screen and (min-width: 100px) {
+        position: fixed;
+        border-bottom-color: rgb(240, 240, 240);
+    }
+
     @media only screen and (min-width: 992px) {
         border-bottom: 1px solid transparent;
         border-bottom-color: rgb(240, 240, 240);
         position: fixed;
         background: white;
-        height: 50px;
+        height: 70px;
 
         .navbar-brand {
             padding: 10px 20px;
@@ -55,6 +70,52 @@
                     &:focus,
                     &:hover {
                         color: fade-out($gray-500, .2);
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        -webkit-transition: background-color 0.2s;
+        -moz-transition: background-color 0.2s;
+        transition: background-color 0.2s;
+        /* Force Hardware Acceleration in WebKit */
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        &.is-fixed {
+            /* when the user scrolls down, we hide the header right above the viewport */
+            top: -10px;
+            -webkit-transition: -webkit-transform 0.2s;
+            -moz-transition: -moz-transform 0.2s;
+            transition: transform 0.2s;
+            border-bottom: 1px solid darken(rgb(240, 240, 240), .05);
+            background-color: $white;
+
+            .navbar-brand {
+                color: $gray-900;
+
+                &:focus,
+                &:hover {
+                    color: $primary;
+                }
+            }
+
+            .navbar-nav {
+                >li.nav-item {
+                    >a {
+                        color: $gray-900;
+
+                        &:focus,
+                        &:hover {
+                            color: $primary;
+                        }
                     }
                 }
             }
