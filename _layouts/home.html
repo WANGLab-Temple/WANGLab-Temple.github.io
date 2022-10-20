@@ -2,34 +2,22 @@
 layout: default
 ---
 
-<!-- Page Header -->
-{% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-  {% else %}
-  <header class="masthead">
-    {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>Lab picture</h1>
-            <span class="subheading"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-<hr>
-
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 col-md-10 mx-auto">
-        <p class="heading1">Welcom to WANGLab</p>
-            <p>introduction of WANGLab.</p>
-        <hr>
+      <div class="col-lg-12 col-md-12 mx-auto">
+        <h1><br><br><br>Welcome to <span style="color: rgb(173, 32, 60);">W</span>ireless Sig<span style="color: rgb(173, 32, 60);">na</span>l Learnin<span style="color: rgb(173, 32, 60);">g Lab</span></h1>
       </div>
+        <div class="col-lg-6 col-md-6 mx-auto" style="margin-top: 10px;" >
+            <p  class="col-lg-12" style="background-color: #f5f5f5;padding: 6px;">Welcome to WANGLab, in the <span style="color: rgb(184, 27, 58);">Department of Computer and Information Sciences </span>at Temple University. Our research focuses on <span style="color: rgb(184, 27, 58);">Mobile Sensing</span>, <span style="color: rgb(184, 27, 58);">Internet of Things</span>, <span style="color: rgb(184, 27, 58);">Cyber Security and Privacy</span>, <span style="color: rgb(184, 27, 58);">Artificial Intelligence</span> and <span style="color: rgb(184, 27, 58);">Sotfware & Hareware Co-Design</span>. Our research is supported by the National Science Foundation (NSF).</p>
+      </div>
+
+      <div class="col-lg-6 col-md-6 mx-auto" style="margin-top: 10px;"> 
+        <figure class="image is-3by2" style="display:block;">
+          <img src="{{ site.baseurl }}/img/bg-post.jpg" draggable="false" width=100% alt=""/>
+        </figure>  
+      </div>
+      <hr>
     </div>
   </div>
 
@@ -37,8 +25,8 @@ layout: default
   <section class="section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-10 col-md-10 mx-auto">
-          <h1 class="section-heading">Supported By</h1>
+        <div class="col-lg-12 col-md-12 mx-auto">
+          <h1><br>Featured Publications</h1>
           <div class="columns is-desktop is-mobile">
                 <div class="column">
                     <a href="">
