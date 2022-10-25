@@ -27,3 +27,811 @@ img {
     -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   }
+
+  /* # Team */
+
+/* ## Team Landing */
+
+.author .tooltip .tooltiptext {
+    bottom: 55px;
+    left: 65px;
+}
+
+.nucleus-icons-test div {
+    position: relative;
+    display: inline-flex;
+}
+
+.nucleus-icons-test img {
+    width: 36px;
+    height: 42px;
+    margin-bottom: 0em;
+}
+
+.nucleus-icons-test span {
+    visibility: hidden;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    border: 1px solid #eee;
+    text-align: center;
+    padding: 4px;
+    border-radius: 3px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    bottom:25px;
+    left:25px;
+ }
+
+.nucleus-icons-test div:hover span {
+    visibility: visible;
+}
+
+.nucleus-icons-test li {
+    display: inline;
+    margin: 0 auto;
+
+}
+
+.nucleus-icons-test {
+    padding-top: 12px;
+}
+
+.categories li, .categories div {
+    overflow: visible;
+}
+
+.category #primary {
+    width: 77%;
+}
+
+.category #secondary {
+    width: 21%;
+}
+
+
+.author-nucleus {
+    display: inline-block;
+    width: 24.7%;
+    padding-bottom: 2.5em;
+}
+
+.author-nucleus.institution:nth-of-type(4):after {
+    clear:both;
+    display: table;
+    content: "";
+}
+
+.author-nucleus .hexa {
+    width: 280px;
+    height: 241px;
+    margin: 0 auto;
+}
+
+.author-nucleus .author-info {
+    text-align: center;
+}
+
+.author-info h2 {
+    padding-top: 15px;
+    padding-bottom: 7px;
+}
+
+.author-info .author-name {
+    color: #000 !important;
+}
+
+.author-info hr {
+    width: 50px;
+    border-style: solid;
+    border-color: black;
+    margin: 0 auto;
+    padding-bottom: 7px;
+}
+
+@media (max-width: 640px) {
+
+    .author-nucleus {
+    width: 100%;
+    margin-bottom: 2em;
+    display: flex;
+    align-items: center;
+}
+
+    .author-nucleus .hexa {
+        width: 105px;
+        height: 90px;
+    }
+
+    .author-nucleus .nucleus-icons {
+        display: none;
+    }
+
+    .author-nucleus .author-info h2 {
+        padding-top: 0px;
+    }
+
+    .author-nucleus .author-info {
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .author-icon-name-container {
+    width: 65%;
+    display: inline-block;
+    }
+
+    .author-info hr { 
+    float: left;
+    margin-right: 100%;
+
+    }
+}
+
+@media (max-width: 1280px) {
+    .author-nucleus {
+        width: 33%;
+    }
+
+    .author-avatar .hexa {
+        width: 300px;
+        height: 258px;
+    }
+
+    .author #secondary {
+        width: 34.4827586%;
+    }
+
+    .categories {
+        width: 300px;
+    }
+
+    .author-background-and-interests {
+        width: 300px;
+    }
+}
+
+.author-background-and-interests p:nth-child(2) {
+        white-space: pre-line;
+        top: -20px;
+        position: relative;
+}
+
+/* ## Team Individual */
+
+@media (max-width: 960px) {
+
+    .author-avatar .hexa {
+        width: 200px;
+        height: 172px;
+    }
+
+    .author-name-container .author-name {
+        font-size: 2rem;
+    }
+
+    .categories {
+        width: 200px;
+    }
+
+    .author #secondary {
+        width: 34.4827586%;
+    }
+
+    .author-background-and-interests {
+        width: 200px;
+    }
+
+    .author-nucleus {
+        width: 50%;
+    }
+
+}
+
+.avatar {
+    border-radius: 0% !important;
+}
+
+.user-profile-picture tr {
+    display: none;
+}
+
+.author-background-and-interests {
+    width: 350px;
+    display: inline-block;
+}
+
+.author-icon-name-container {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.author-name-container {
+    margin-left: 1em;
+}
+
+.author-name-container h1 {
+    font-size: 2.25em;
+    padding: 0px;
+}
+
+.author-social li {
+    border: 1px solid #d8d8d8;
+    display: inline-block;
+    padding: 3px;
+}
+
+.author-social {
+    margin-bottom: 1em;
+}
+
+.author-social .author-role {
+    border: 0;
+    clear: both;
+    margin-bottom: .3em;
+}
+
+.author-subtitle {
+    color: #000;
+    margin-bottom: 0px;
+}
+
+.author #primary {
+    float: right;
+}
+
+.author #secondary {
+    float: left;
+}
+
+.small-icons {
+    width: 36px;
+    height: 42px;
+    margin-bottom: 0em;
+    margin-left: .4em;
+}
+
+.mobile-icons {
+    display: none;
+    height: 100%;
+}
+
+.author-icon-mobile {
+    display: none !important;
+    border: none !important;
+    padding: 0px !important;
+}
+
+.author-icon-mobile img {
+    margin-bottom: 0px;
+    width: 36px;
+    margin-top: -0.7em;
+}
+
+@media (max-width: 640px) {
+
+    .author-nucleus {
+        width:100% !important;
+        margin-bottom: 0em !important;
+    }
+
+    .author-background-and-interests {
+        width: 100% !important;
+    }
+
+    .author-social .author-role {
+        margin-bottom: .4em;
+    }
+
+    .author-icon-mobile {
+        display: inline-block !important;
+    }
+
+    .author-avatar .hexa {
+        display: inline-block;
+        float: left;
+        margin-top: .25em;
+        width: 105px !important;
+        height: 90px !important;
+    }
+
+    .author-icon-name-container {
+        display: inline-block !important;
+        align-items: center !important;
+        margin-top: 0em !important;
+    }
+
+    .author-icon {
+        display: none !important;
+    }
+
+    .categories li {
+        display: none;
+    }
+
+    .mobile-icons div {
+        width: 30%;
+        display: inline;
+    }
+
+    .breadcrumb {
+        font-size: 20px;
+    }
+
+    .author #secondary {
+        width: 100% !important;
+    }
+
+    .publications h1 {
+        text-align: center;
+    }
+
+    .categories {
+        width: 100%;
+        margin-bottom: 0em;
+    }
+
+    .biography-title {
+        text-align: center;
+    }
+
+}
+
+.hexaHolder{
+    height: 115px;
+    width: 99px;
+    float: left;
+}
+.hexa img{
+    vertical-align: top;
+    margin-bottom: 18px;
+    object-fit: cover;
+    height: 100%;
+}
+.hexa, .hexa div {
+    margin: 0 auto;
+    transform-origin: 50% 50%;
+    overflow: hidden;
+}
+.hexa {
+    text-align: center;
+    margin: 0;
+    width: 135px;
+    height: 115px;
+}
+.hexa div {
+  width: 100%;
+  height: 100%;
+}
+.hexa {
+  transform: rotate(120deg);
+}
+.hex1 {
+  transform: rotate(-60deg);
+}
+.hex2 {
+  transform: rotate(-60deg);
+}
+
+.hex-row {
+    clear: left;
+}
+
+.hexaHolder.even {
+    margin-top: 57.5px;
+}
+
+#wrap {
+    min-width:600px;    
+}
+
+/* avatars */
+
+
+.author-avatar .hexaHolder{
+    height: 400px;
+    width: 344px;
+    float: left;
+}
+
+.author-avatar .hexa img{
+    width:100%;
+    margin-top: -5px;
+}
+
+.author-avatar .hexa, .hexa div {
+    margin: 0 auto;
+    transform-origin: 50% 50%;
+    overflow: hidden;
+}
+
+.author-avatar .hexa {
+    text-align: center;
+    margin: 0;
+    width: 400px;
+    height: 344px;
+}
+
+.author-avatar .hexa div {
+  width: 100%;
+  height: 100%;
+}
+
+.author-avatar .hexa {
+  transform: rotate(120deg);
+}
+
+.author-avatar .hex1 {
+  transform: rotate(-60deg);
+}
+.author-avatar .hex2 {
+  transform: rotate(-60deg);
+}
+
+.author-avatar .hex-row {
+    clear: left;
+}
+
+.author-avatar .hexaHolder.even {
+    margin-top: 57.5px;
+}
+
+.author-avatar #wrap {
+    min-width:600px;    
+}
+
+/* # Team */
+
+/* ## Team Landing */
+
+.author .tooltip .tooltiptext {
+    bottom: 55px;
+    left: 65px;
+}
+
+.nucleus-icons-test div {
+    position: relative;
+    display: inline-flex;
+}
+
+.nucleus-icons-test img {
+    width: 36px;
+    height: 42px;
+    margin-bottom: 0em;
+}
+
+.nucleus-icons-test span {
+    visibility: hidden;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    border: 1px solid #eee;
+    text-align: center;
+    padding: 4px;
+    border-radius: 3px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    bottom:25px;
+    left:25px;
+ }
+
+.nucleus-icons-test div:hover span {
+    visibility: visible;
+}
+
+.nucleus-icons-test li {
+    display: inline;
+    margin: 0 auto;
+
+}
+
+.nucleus-icons-test {
+    padding-top: 12px;
+}
+
+.categories li, .categories div {
+    overflow: visible;
+}
+
+.category #primary {
+    width: 77%;
+}
+
+.category #secondary {
+    width: 21%;
+}
+
+
+.author-nucleus {
+    margin-top: 20px;
+    display: inline-block;
+    width: 24.7%;
+    padding-bottom: 2.5em;
+}
+
+.author-nucleus.institution:nth-of-type(4):after {
+    clear:both;
+    display: table;
+    content: "";
+}
+
+.author-nucleus .hexa {
+    width: 280px;
+    height: 241px;
+    margin: 0 auto;
+}
+
+.author-nucleus .author-info {
+    text-align: center;
+}
+
+.author-info h2 {
+    padding-top: 15px;
+    padding-bottom: 7px;
+}
+
+.author-info .author-name {
+    color: #000 !important;
+}
+
+.author-info hr {
+    width: 50px;
+    border-style: solid;
+    border-color: black;
+    margin: 0 auto;
+    padding-bottom: 7px;
+}
+
+@media (max-width: 640px) {
+
+    .author-nucleus {
+    width: 100%;
+    margin-bottom: 2em;
+    display: flex;
+    align-items: center;
+}
+
+    .author-nucleus .hexa {
+        width: 105px;
+        height: 90px;
+    }
+
+    .author-nucleus .nucleus-icons {
+        display: none;
+    }
+
+    .author-nucleus .author-info h2 {
+        padding-top: 0px;
+    }
+
+    .author-nucleus .author-info {
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .author-icon-name-container {
+    width: 65%;
+    display: inline-block;
+    }
+
+    .author-info hr { 
+    float: left;
+    margin-right: 100%;
+
+    }
+}
+
+@media (max-width: 1280px) {
+    .author-nucleus {
+        width: 33%;
+    }
+
+    .author-avatar .hexa {
+        width: 300px;
+        height: 258px;
+    }
+
+    .author #secondary {
+        width: 34.4827586%;
+    }
+
+    .categories {
+        width: 300px;
+    }
+
+    .author-background-and-interests {
+        width: 300px;
+    }
+}
+
+.author-background-and-interests p:nth-child(2) {
+        white-space: pre-line;
+        top: -20px;
+        position: relative;
+}
+
+/* ## Team Individual */
+
+@media (max-width: 960px) {
+
+    .author-avatar .hexa {
+        width: 200px;
+        height: 172px;
+    }
+
+    .author-name-container .author-name {
+        font-size: 2rem;
+    }
+
+    .categories {
+        width: 200px;
+    }
+
+    .author #secondary {
+        width: 34.4827586%;
+    }
+
+    .author-background-and-interests {
+        width: 200px;
+    }
+
+    .author-nucleus {
+        width: 50%;
+    }
+
+}
+
+.avatar {
+    border-radius: 0% !important;
+}
+
+.user-profile-picture tr {
+    display: none;
+}
+
+.author-background-and-interests {
+    width: 350px;
+    display: inline-block;
+}
+
+.author-icon-name-container {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.author-name-container {
+    margin-left: 1em;
+}
+
+.author-name-container h1 {
+    font-size: 2.25em;
+    padding: 0px;
+}
+
+.author-social li {
+    border: 1px solid #d8d8d8;
+    display: inline-block;
+    padding: 3px;
+}
+
+.author-social {
+    margin-bottom: 1em;
+}
+
+.author-social .author-role {
+    border: 0;
+    clear: both;
+    margin-bottom: .3em;
+}
+
+.author-subtitle {
+    color: #000;
+    margin-bottom: 0px;
+}
+
+.author #primary {
+    float: right;
+}
+
+.author #secondary {
+    float: left;
+}
+
+.small-icons {
+    width: 36px;
+    height: 42px;
+    margin-bottom: 0em;
+    margin-left: .4em;
+}
+
+.mobile-icons {
+    display: none;
+    height: 100%;
+}
+
+.author-icon-mobile {
+    display: none !important;
+    border: none !important;
+    padding: 0px !important;
+}
+
+.author-icon-mobile img {
+    margin-bottom: 0px;
+    width: 36px;
+    margin-top: -0.7em;
+}
+
+@media (max-width: 640px) {
+
+    .author-nucleus {
+        width:100% !important;
+        margin-bottom: 0em !important;
+    }
+
+    .author-background-and-interests {
+        width: 100% !important;
+    }
+
+    .author-social .author-role {
+        margin-bottom: .4em;
+    }
+
+    .author-icon-mobile {
+        display: inline-block !important;
+    }
+
+    .author-avatar .hexa {
+        display: inline-block;
+        float: left;
+        margin-top: .25em;
+        width: 150px !important;
+        height: 135px !important;
+    }
+
+    .author-icon-name-container {
+        display: inline-block !important;
+        align-items: center !important;
+        margin-top: 0em !important;
+    }
+
+    .author-icon {
+        display: none !important;
+    }
+
+    .categories li {
+        display: none;
+    }
+
+    .mobile-icons div {
+        width: 30%;
+        display: inline;
+    }
+
+    .breadcrumb {
+        font-size: 20px;
+    }
+
+    .author #secondary {
+        width: 100% !important;
+    }
+
+    .publications h1 {
+        text-align: center;
+    }
+
+    .categories {
+        width: 100%;
+        margin-bottom: 0em;
+    }
+
+    .biography-title {
+        text-align: center;
+    }
+
+}
