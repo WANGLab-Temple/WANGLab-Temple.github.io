@@ -1,3 +1,130 @@
 ---
 layout: default
 ---
+
+<body>
+    <div style="margin-top:100px" id="publication">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <ul class="nav nav-tabs nav-fill" style="margin-bottom: 20px;">
+                    <li role="presentation" class="nav-items">
+                        <input type="button" style="background-color:white;font-size: 19px; color:#933;" class="nav-link" onclick="test()" id="1" value="Conference Papers">
+                    </li>
+                    <li role="presentation" class="nav-items">
+                        <input type="button" style="background-color:white;font-size: 19px;" class="nav-link" onclick="test2()" id="2" value="Journal and Magazine">
+                    </li>
+                    <li role="presentation" class="nav-items">
+                        <a class="nav-link " href="{{ site.baseurl }}/publications" id="3">Poster and Preprints</a>
+                    </li>
+                    <li role="presentation" class="nav-items">
+                        <a class="nav-link " href="{{ site.baseurl }}/publications" id="4">Book Chapters</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<script>
+
+    (function () {
+      $(".nav-items").click(function (event) {
+        event.preventDefault();
+          console.log(1)
+          $(this).siblings('li').removeClass('active');  // 删除其他兄弟元素的样式
+        $(this).addClass('active');  
+      });
+    })
+    function test(){
+        console.log(1)
+        $(this).siblings('li').removeClass('active');  // 删除其他兄弟元素的样式
+        console.log(document.getElementById("1").className);
+        var $x = $(document.getElementById("1"));
+        $x.addClass('active');  
+        document.getElementById("2").classList.remove("active");
+        $(this).addClass('active');
+        console.log(document.getElementById("2").className);
+    }
+
+    function test2(){
+        console.log(2)
+        $(this).siblings('li').removeClass('active');  // 删除其他兄弟元素的样式
+        console.log(document.getElementById("2").className);
+        var $x = $(document.getElementById("2"));
+        $x.addClass('active');  
+        $(this).addClass('active');
+        console.log(document.getElementById("1").className);
+    }
+    document.onclick=function()
+{ var obj = event.srcElement; 
+if(obj.type == "button"){ 
+    var $x1 = $(document.getElementById("1"));
+    var $x2 = $(document.getElementById("2"));
+    var $x3 = $(document.getElementById("1"));
+    var $x4 = $(document.getElementById("1"));
+    if(obj.id==$x1){
+        console.log(1)
+
+    }
+} 
+} 
+
+</script>
+
+
+</body>
+<!-- <script>
+$(function(){
+    $(".nav-items li").click(function() {
+        $(this).siblings('li').removeClass('active');  // 删除其他兄弟元素的样式
+        $(this).addClass('active');                            // 添加当前元素的样式
+    });
+});
+
+function gotopdf(){
+            if($(".nav-items li:first").hasClass("active"))
+{
+window.location.href="/hydt/index.jhtml";
+//有class active执行。。。
+}
+else{
+window.location.href="/tpxw/index.jhtml";
+//没有有class active执行。。。
+}
+        };
+</script> -->
+
+<div class="top-to-page" id="top-page">
+    <a href="#top" class="scroll"> <i class="fa fa-arrow-circle-up" style="font-size:48px;color:red"></i></a>   
+</div>
+
+<script>
+
+(function () {
+  $(".scroll").click(function (event) {
+      event.preventDefault();
+      $('html,body').animate({
+          scrollTop: $(this.hash).offset().top
+      }, 1200);
+  });
+})
+
+window.onscroll = function() {
+     scrollFunction()
+ };
+   
+  function scrollFunction() {
+    console.log(121);
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        
+    var opacity=0.1+(document.documentElement.scrollTop-400)/2000
+        console.log(document.getElementById("top-page").style.display);
+          document.getElementById("top-page").style.display = "block";
+          document.getElementById("top-page").style.opacity = opacity;
+    } else {
+      console.log(document.getElementById("top-page").style.display);
+        document.getElementById("top-page").style.display = "none";
+    }
+ }
+</script>
