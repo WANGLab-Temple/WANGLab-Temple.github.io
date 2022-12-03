@@ -78,9 +78,13 @@
    }
    
    .publication.odd {
-     background-color: #fafafa;
+     background-color: #f5f5f5;
    }
    
+   .publication.even {
+    background-color: #fcfcfc;
+  }
+
    .publications {
      border-bottom: 1px solid #eee !important;
      content-visibility: auto;
@@ -221,4 +225,12 @@
    .button{
        font-size: 19px;
    }
+
+   .pub-p{
+     font-size:18px
+   }
+
+   .pub-toast{
+    font-size:16px
+  }
 }

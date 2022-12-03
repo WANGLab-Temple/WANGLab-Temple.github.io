@@ -3,15 +3,82 @@ layout: default
 ---
 
 <body>
+    <div style="margin-top:100px" id="publication">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                <ul class="nav nav-tabs nav-fill">
-                    <li role="presentation" class="nav-item">
-                        <a class="nav link active" href="{{ site.baseurl }}/Publication/journal">journal</a>
+                <ul class="nav nav-tabs nav-fill" style="margin-bottom: 20px;">
+                    <li role="presentation" class="nav-items">
+                        <a class="nav-link" href="{{ site.baseurl }}/publications/papers" id="2">Conference Papers</a>
+                    </li>
+                    <li role="presentation" class="nav-items">
+                        <a class="nav-link " href="{{ site.baseurl }}/publications/journal" id="3">Journal and Magazine</a>
+                    </li>
+                    <li role="presentation" class="nav-items">
+                        <a class="nav-link " href="{{ site.baseurl }}/publications/poster" id="4">Poster and Preprints</a>
+                    </li>
+                    <li role="presentation" class="nav-items">
+                        <a class="nav-link active" href="{{ site.baseurl }}/publications/book" id="5">Book Chapters</a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+    </div>
+
+
 </body>
+<!-- <script>
+$(function(){
+    $(".nav-items li").click(function() {
+        $(this).siblings('li').removeClass('active');  // 删除其他兄弟元素的样式
+        $(this).addClass('active');                            // 添加当前元素的样式
+    });
+});
+
+function gotopdf(){
+            if($(".nav-items li:first").hasClass("active"))
+{
+window.location.href="/hydt/index.jhtml";
+//有class active执行。。。
+}
+else{
+window.location.href="/tpxw/index.jhtml";
+//没有有class active执行。。。
+}
+        };
+</script> -->
+
+<div class="top-to-page" id="top-page">
+    <a href="#top" class="scroll"> <i class="fa fa-arrow-circle-up" style="font-size:48px;color:red"></i></a>   
+</div>
+
+<script>
+
+(function () {
+  $(".scroll").click(function (event) {
+      event.preventDefault();
+      $('html,body').animate({
+          scrollTop: $(this.hash).offset().top
+      }, 1200);
+  });
+})
+
+window.onscroll = function() {
+     scrollFunction()
+ };
+   
+  function scrollFunction() {
+    console.log(121);
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        
+    var opacity=0.1+(document.documentElement.scrollTop-400)/2000
+        console.log(document.getElementById("top-page").style.display);
+          document.getElementById("top-page").style.display = "block";
+          document.getElementById("top-page").style.opacity = opacity;
+    } else {
+      console.log(document.getElementById("top-page").style.display);
+        document.getElementById("top-page").style.display = "none";
+    }
+ }
+</script>

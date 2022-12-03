@@ -1,79 +1,254 @@
----
-layout: default
----
+<!DOCTYPE html>
+
+<html>
+
+{% include head.html %}
 
 <body>
+
+  {% include navbar.html %}
+
+
     <div style="margin-top:100px" id="publication">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
                 <ul class="nav nav-tabs nav-fill" style="margin-bottom: 20px;">
                     <li role="presentation" class="nav-items">
-                        <input type="button" style="background-color:white;font-size: 19px; color:#933;" class="nav-link" onclick="test()" id="1" value="Conference Papers">
+                        <a class="nav-link" href="{{ site.baseurl }}/publications/papers" id="2">Conference Papers</a>
                     </li>
                     <li role="presentation" class="nav-items">
-                        <input type="button" style="background-color:white;font-size: 19px;" class="nav-link" onclick="test2()" id="2" value="Journal and Magazine">
+                        <a class="nav-link " href="{{ site.baseurl }}/publications/journal" id="3">Journal and Magazine</a>
                     </li>
                     <li role="presentation" class="nav-items">
-                        <a class="nav-link " href="{{ site.baseurl }}/publications" id="3">Poster and Preprints</a>
+                        <a class="nav-link " href="{{ site.baseurl }}/publications/poster" id="4">Poster and Preprints</a>
                     </li>
                     <li role="presentation" class="nav-items">
-                        <a class="nav-link " href="{{ site.baseurl }}/publications" id="4">Book Chapters</a>
+                        <a class="nav-link " href="{{ site.baseurl }}/publications/book" id="5">Book Chapters</a>
                     </li>
                 </ul>
+
+                <form id="publications-form">
+                    <div class="row no-gutters hidden-sm hidden-xs">
+                      <div class="col-auto"><select id="select-year" class="form-control">
+                          <option value="">Year</option>
+                          <optgroup label='-'></optgroup>
+                          <option class="year" value="All">All</option>
+                          <option class="year" value="2022">2023</option>
+                          <option class="year" value="2022">2022</option>
+                          <option class="year" value="2021">2021</option>
+                          <option class="year" value="2020">2020</option>
+                          <option class="year" value="2019">2019</option>
+                          <option class="year" value="before">Before 2018</option>
+                        </select></div>
+                      <div class="col pl-2"><select id="select-topic" class="form-control">
+                          <option value="">Topic</option>
+                          <optgroup label='-'></optgroup>
+                          <option class="topic" value="All">All</option>
+                          <option class="topic" value="WiFi">WiFi Signals</option>
+                          <option class="topic" value="2021">Wearables</option>
+                          <option class="topic" value="Acoustic">Acoustic Signals</option>
+                          <option class="topic" value="Mobile">Mobile Computing</option>
+                          <option class="topic" value="Others">Others</option>
+                        </select></div>
+                        <div class="col-auto pl-2"><a class="btn btn-light btn-block" onclick="submit()" style="font-weight:500 ;">Submit</a></div>
+                      <div class="col-auto pl-2"><a class="btn btn-light btn-block" onclick="resetFilters()" style="font-weight:500 ;">Reset filters</a></div>
+                    </div>
+                  </form>
+
+
+<!--publication-->
+    <div class="publications">
+        <div class="publication card odd" id="b-1">
+        <div class="row no-gutters">
+          <div class="col-auto d-none d-md-block p-2">
+            <img class="thumb" src="{{ site.baseurl }}/img/publications/b-1.jpg" loading="lazy" />
+          </div>
+          <div class="col pl-2">
+            <div class="card-block py-2">
+              <div class="bib"><div class="pub-p">Hongbo Liu, Yan Wang, Jian Liu, Yingying Chen,</div> <em><a href="https://link.springer.com/chapter/10.1007/978-3-030-10597-6_9" target="_blank">Proactive User Authentication Using WiFi Signals in Dynamic Networks,</a></em><div class="pub-p">Proactive and Dynamic Network Defense, Cliff Wang and Zhuo Lu (Eds.), Springer, 2019.  </div></div>
             </div>
+          </div>
+          <div class="col-auto d-none d-md-block">
+            <div class="btn-group-vertical" role="group">
+              <a class="btn btn-link p-1" href="#" data-toggle="modal" data-target="#b-1-fulltext">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a>
+              <a class="btn btn-link p-1" href="#" data-toggle="modal" data-target="#b-1-abstract">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M14 17H4v2h10v-2zm6-8H4v2h16V9zM4 15h16v-2H4v2zM4 5v2h16V5H4z"/></svg></a>
+              <a class="btn btn-link p-1" href="#" data-toggle="modal" data-target="#b-1-bibtex">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg></a>
+            </div>
+          </div>
+        </div>
         </div>
     </div>
+
+    <div class="modal" id="b-1-fulltext" tabindex="-1" data-focus="false">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Fulltext Options</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="list-group list-group-flush"><a class="list-group-item list-group-item-action pub-toast" href="https://link.springer.com/chapter/10.1007/978-3-030-10597-6_9" target="_blank">https://link.springer.com/chapter/10.1007/</a></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="modal" id="b-1-abstract" tabindex="-1" data-focus="false">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Proactive User Authentication Using WiFi Signals in Dynamic Networks</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body pub-toast">
+                User authentication is the critical first step of network security to detect identity-based attacks
+                and prevent subsequent malicious attacks. However, the increasingly dynamic mobile
+                environments make it harder to always apply the cryptographic-based methods for user
+                authentication due to their infrastructural and key management overhead. Exploiting non-
+                cryptographic-based techniques grounded on physical layer properties to perform user
+                authentication appears promising. To ensure the security of mobile devices in dynamic …
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="modal" id="b-1-bibtex" tabindex="-1" data-focus="false">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">BibTeX Entry</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body pub-toast">
+              <pre>@incollection{liu2019proactive,
+                title={Proactive User Authentication Using WiFi Signals in Dynamic Networks},
+                author={Liu, Hongbo and Wang, Yan and Liu, Jian and Chen, Yingying},
+                booktitle={Proactive and Dynamic Network Defense},
+                pages={223--248},
+                year={2019},
+                publisher={Springer}
+              }</pre>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+<!--publication-->
+    <div class="publications">
+        <div class="publication card even" id="p-1">
+        <div class="row no-gutters">
+          <div class="col-auto d-none d-md-block p-2">
+            <img class="thumb" src="{{ site.baseurl }}/img/publications/p-1.jpg" loading="lazy" />
+          </div>
+          <div class="col pl-2">
+            <div class="card-block py-2">
+              <div class="bib"><div class="pub-p">Yucheng Xie, Ruizhe Jiang, Xiaonan Guo, Yan Wang, Jerry Cheng, Yingying Chen,</div> <em><a href="https://dl.acm.org/doi/abs/10.1145/3498361.3538774?casa_token=yX64w_ZrN_IAAAAA:scSdU4dOWrSSX1f1cokPHDvgWbQ4VM96R0jEGRN9FSDSv2EEnkBozfNKdC_8pIBbNj4BiFA3wywA" target="_blank">Universal Targeted Adversarial Attacks Against mmWave-based Human Activity Recognition,</a></em><div class="pub-p">Proceedings of IEEE International Conference on Computer Communications.</div></div>
+            </div>
+          </div>
+          <div class="col-auto d-none d-md-block">
+            <div class="btn-group-vertical" role="group">
+              <a class="btn btn-link p-1" href="#" data-toggle="modal" data-target="#p-1-fulltext">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a>
+              <a class="btn btn-link p-1" href="#" data-toggle="modal" data-target="#p-1-abstract">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M14 17H4v2h10v-2zm6-8H4v2h16V9zM4 15h16v-2H4v2zM4 5v2h16V5H4z"/></svg></a>
+              <a class="btn btn-link p-1" href="#" data-toggle="modal" data-target="#p-1-bibtex">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg></a>
+            </div>
+          </div>
+        </div>
+        </div>
     </div>
 
-<script>
+    <div class="modal" id="p-1-fulltext" tabindex="-1" data-focus="false">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Fulltext Options</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="list-group list-group-flush"><a class="list-group-item list-group-item-action pub-toast" href="https://dl.acm.org/doi/abs/10.1145/3498361.3538774?casa_token=yX64w_ZrN_IAAAAA:scSdU4dOWrSSX1f1cokPHDvgWbQ4VM96R0jEGRN9FSDSv2EEnkBozfNKdC_8pIBbNj4BiFA3wywA" target="_blank">https://dl.acm.org/doi/abs/10.1145</a></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    (function () {
-      $(".nav-items").click(function (event) {
-        event.preventDefault();
-          console.log(1)
-          $(this).siblings('li').removeClass('active');  // 删除其他兄弟元素的样式
-        $(this).addClass('active');  
-      });
-    })
-    function test(){
-        console.log(1)
-        $(this).siblings('li').removeClass('active');  // 删除其他兄弟元素的样式
-        console.log(document.getElementById("1").className);
-        var $x = $(document.getElementById("1"));
-        $x.addClass('active');  
-        document.getElementById("2").classList.remove("active");
-        $(this).addClass('active');
-        console.log(document.getElementById("2").className);
-    }
+    <div class="modal" id="p-1-abstract" tabindex="-1" data-focus="false">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Universal targeted attacks against mmWave-based human activity recognition system</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body pub-toast">
+                Millimeter wave (mmWave)-based human activity recognition (HAR) systems have emerged in recent years due to their better privacy preservation and higher-resolution sensing. However, these systems are vulnerable to adversarial attacks. In this work, we propose a universal targeted attack method for mmWave-based HAR system. In particular, a universal perturbation is generated in advance which can be added to new-coming mmWave data to deceive the HAR system, causing it to output our desired label. We validate our proposed attack using a public mmWave dataset. We demonstrate the effectiveness of our proposed universal attack with a high attack success rate of over 95%.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="modal" id="p-1-bibtex" tabindex="-1" data-focus="false">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">BibTeX Entry</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body pub-toast">
+              <pre>@inproceedings{xie2022universal,
+                title={Universal targeted attacks against mmWave-based human activity recognition system},
+                author={Xie, Yucheng and Jiang, Ruizhe and Guo, Xiaonan and Wang, Yan and Cheng, Jerry and Chen, Yingying},
+                booktitle={Proceedings of the 20th Annual International Conference on Mobile Systems, Applications and Services},
+                pages={541--542},
+                year={2022}
+              }</pre>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    function test2(){
-        console.log(2)
-        $(this).siblings('li').removeClass('active');  // 删除其他兄弟元素的样式
-        console.log(document.getElementById("2").className);
-        var $x = $(document.getElementById("2"));
-        $x.addClass('active');  
-        $(this).addClass('active');
-        console.log(document.getElementById("1").className);
-    }
-    document.onclick=function()
-{ var obj = event.srcElement; 
-if(obj.type == "button"){ 
-    var $x1 = $(document.getElementById("1"));
-    var $x2 = $(document.getElementById("2"));
-    var $x3 = $(document.getElementById("1"));
-    var $x4 = $(document.getElementById("1"));
-    if(obj.id==$x1){
-        console.log(1)
-
-    }
-} 
-} 
-
-</script>
 
 
-</body>
+
+</div>
+</div>
+</div>
+</div>
+
+
 <!-- <script>
 $(function(){
     $(".nav-items li").click(function() {
@@ -128,3 +303,15 @@ window.onscroll = function() {
     }
  }
 </script>
+
+{% include pub-json2html.html %}
+
+{% include footer.html %}
+
+{% include scripts.html %}
+
+{% include google-analytics.html %}
+
+</body>
+
+</html>
