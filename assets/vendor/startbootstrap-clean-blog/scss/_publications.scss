@@ -45,7 +45,7 @@
    }
    
    a, .btn-link {
-       font-size:19px;
+       font-size:18px;
      color: #933;
    }
    
@@ -78,11 +78,20 @@
    }
    
    .publication.odd {
-     background-color: #f5f5f5;
+     background-color: #f1f1f1;
+     transition: all 0.6s ease;
    }
    
+   .publication.odd:hover{
+    background-color: #e5e5e5;
+   }
    .publication.even {
     background-color: #fcfcfc;
+    transition: all 0.6s ease;
+  }
+
+  .publication.even:hover {
+    background-color: #dbdbdb;
   }
 
    .publications {
@@ -108,9 +117,11 @@
      text-justify: inter-word;
    }
    
+
    .publication img.thumb {
-     width: 60px;
-     height: 77px;
+     margin-top:5px;
+     width: 96px;
+     height: 120px;
      object-fit: cover;
      /* filter: grayscale(50%); */
      /* transition: all 0.1s;*/
@@ -227,10 +238,17 @@
    }
 
    .pub-p{
-     font-size:18px
+     margin-top:5px;
+     font-size:17px;
    }
 
    .pub-toast{
     font-size:16px
+  }
+
+  @media screen and (max-width: 760px){
+    .pl-1{
+      display: none;
+    }
   }
 }

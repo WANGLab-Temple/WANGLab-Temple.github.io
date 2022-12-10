@@ -100,7 +100,7 @@
             background-color: $white;
 
             .navbar-brand {
-                color: $gray-900;
+                color: $gray-700;
 
                 &:focus,
                 &:hover {
@@ -111,7 +111,7 @@
             .navbar-nav {
                 >li.nav-item {
                     >a {
-                        color: $gray-900;
+                        color: $gray-700;
 
                         &:focus,
                         &:hover {
