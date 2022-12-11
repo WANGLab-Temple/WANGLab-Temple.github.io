@@ -288,6 +288,10 @@ window.location.href="/tpxw/index.jhtml";
   var nav=document.getElementsByClassName("label")[0];
   var label = nav.getElementsByTagName("li");
   var pub = document.getElementsByClassName("pub-list")[0];
+  var syear=document.getElementById("select-year");
+  var stopic=document.getElementById("select-topic");
+  var year=syear[0];
+  var topic=stopic[0];
 
   var state={
     text:'',
@@ -327,7 +331,7 @@ for(var i = 0; i < label.length; i++){
 
             state.category = label[j].id;
             console.log(state.category);
-            renderPage(arr,state.category);
+            renderPageBySelect(arr,state.category,year.value,topic.value);
             console.log(arr);
             // var newArr = screenSelect(arr, state.category); //筛选性别执行后返回新数组
             // console.log(newArr);
@@ -362,10 +366,7 @@ function renderPageBySelect(data,state_category,selected_year,selected_topic) {
 }
 
 function submit(){
-  var syear=document.getElementById("select-year");
-  var stopic=document.getElementById("select-topic");
-  var year=syear[0];
-  var topic=stopic[0];
+
   for(var i=0;i<syear.length;i++){
     var index=syear[i];
     console.log(index);
