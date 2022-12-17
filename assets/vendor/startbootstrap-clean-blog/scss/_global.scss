@@ -929,3 +929,32 @@ img::-moz-selection {
 }
 }
 
+.box {
+  background-color: #fff;
+  border-radius: 6px;
+  color: #4a4a4a;
+  display: block;
+  padding: 1.25rem;
+}
+
+.button {
+  background-color: #fff;
+  border-color: #dbdbdb;
+  border-width: 1px;
+  color: #363636;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.button.is-info {
+  background-color: #3298dc;
+  border-color: transparent;
+  color: #fff;
+}
+

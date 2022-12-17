@@ -1,3 +1,74 @@
 ---
 layout: default
 ---
+
+---
+layout: default
+---
+
+<body>
+  <Section class="research">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mx-auto" style="text-align: center;">
+        <div class="box">
+            <div style="text-align: center;">
+                <p class="title is-8" style="margin-bottom: 0.1rem;">Families In the Wild</p>
+                <p class="title is-4" >A Kinship Recognition Benchmark</p>
+            </div>
+            <div>
+                <figure class="image">
+                  <img src="https://web.northeastern.edu/smilelab/fiw/images/teaser-image.png" alt="Research" />
+                </figure>
+            </div>
+            <div class="block has-text-justified">
+                Families In the Wild (FIW) is the <b>largest</b> and <b>most comprehensive</b> image database for automatic kinship recognition.
+
+                Our motivation is to provide the resource needed for kinship recognition technologies to transition from research-to-reality. with over 11,932 family photos of 1,000 families FIW closely reflects the true data distribution of families worldwide (see Database for more information). There are many directions for FIW to take throughout the machine vision and related research communities (e.g., in relation to benchmarks (see Challenges and Results for details), new benchmarks, generative models, multi-modal learning, to name a few). In terms of its practical value, many could benefit from FIW as well, such as the consumer (e.g. automatic photo library management), scholar (e.g. historic lineage & genealogical studies), analyzer (e.g. social-media-based analysis), investigator (e.g. missing persons and human traffickers).
+            </div>
+            <div style="text-align: center;">
+                <a class="button is-info" href="https://forms.gle/w1FBVX9YWheHs6VB7">
+                    <i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i>Download
+                </a>
+                <a class="button is-success" href="https://github.com/visionjo/fiw">
+                    <i class="fa fa-github fa-lg" aria-hidden="true"></i> Github
+                </a>
+                <a class="button is-warning" href="https://web.northeastern.edu/smilelab/fiw/index.html">
+                    <i class="fa fa-link fa-lg" aria-hidden="true"></i> Project
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<script>
+
+(function () {
+  $(".scroll").click(function (event) {
+      event.preventDefault();
+      $('html,body').animate({
+          scrollTop: $(this.hash).offset().top
+      }, 1200);
+  });
+})
+
+window.onscroll = function() {
+     scrollFunction()
+ };
+   
+  function scrollFunction() {
+    console.log(121);
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        
+    var opacity=0.1+(document.documentElement.scrollTop-400)/2000
+        console.log(document.getElementById("top-page").style.display);
+          document.getElementById("top-page").style.display = "block";
+          document.getElementById("top-page").style.opacity = opacity;
+    } else {
+      console.log(document.getElementById("top-page").style.display);
+        document.getElementById("top-page").style.display = "none";
+    }
+ }
+</script>
