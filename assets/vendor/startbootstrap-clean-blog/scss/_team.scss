@@ -752,6 +752,7 @@
 
     .author-name-container .author-name {
         font-size: 2rem;
+        margin-top: -5px !important;
     }
 
     .categories {
@@ -773,7 +774,7 @@
     .author-info .author-icon-name-container {
         margin: auto;
         top: 0;
-        margin-left: 24%;
+        margin-left: 23%;
         bottom: 0;
     }
 
@@ -788,7 +789,7 @@
     .author-info .author-icon-name-container {
         margin: auto;
         top: 0;
-        margin-left: 18%;
+        margin-left: 15% !important;
         bottom: 0;
     }
 
