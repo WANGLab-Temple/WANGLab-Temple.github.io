@@ -36,7 +36,17 @@ h2{
         text-decoration: None;
     }
 }
-h3,
+
+h3{
+  line-height: 1.2;
+  font-size:25px;
+  font-family: Inter, sans-serif;
+  margin-right:20px;
+  a {
+      text-decoration: None;
+  }
+}
+
 h4,
 h5,
 h6 {
@@ -958,3 +968,60 @@ img::-moz-selection {
   color: #fff;
 }
 
+.card:hover {
+  box-shadow: 0 2px 8px rgba(119, 118, 118, 0.25), 0 8px 8px rgba(128, 126, 126, 0.22);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.card {
+  margin-top:20px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 2px 2px rgba(119, 118, 118, 0.25), 0 2px 2px rgba(128, 126, 126, 0.22);
+}
+.img-responsive{
+  display: block;
+  max-width: 90%;
+  max-height: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+	left: 20px;
+	right: 0;
+	bottom: 0;
+}
+
+@media (max-width: 640px) {
+
+  .re-p{
+    display: none;
+    font-size: 18px !important;
+  }
+
+  .re-title{
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 960px) {
+
+  .re-p{
+    font-size: 18px !important;
+  }
+
+  .re-title{
+    font-size: 20px;
+  }
+}
+
+.re-p{
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.re-title{
+  line-height: 1.2;
+  font-size: 25px;
+  font-family: Inter, sans-serif;
+  margin-right: 20px;
+}
