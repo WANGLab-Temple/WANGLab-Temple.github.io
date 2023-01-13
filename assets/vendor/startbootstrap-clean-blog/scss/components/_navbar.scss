@@ -66,7 +66,7 @@
             >li.nav-item {
                 >a {
                     padding: 10px 20px;
-                    color: $gray-600;
+                    color: $gray-700;
 
                     &:focus,
                     &:hover {
@@ -92,7 +92,7 @@
 
         &.is-fixed {
             /* when the user scrolls down, we hide the header right above the viewport */
-            top: -10px;
+            top: -5px;
             -webkit-transition: -webkit-transform 0.2s;
             -moz-transition: -moz-transform 0.2s;
             transition: transform 0.2s;
