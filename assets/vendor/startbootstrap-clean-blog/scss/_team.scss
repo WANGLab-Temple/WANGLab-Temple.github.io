@@ -988,4 +988,6 @@
 
 .box:hover {
     box-shadow: 0 2px 6px rgba(119, 118, 118, 0.25), 0 6px 6px rgba(128, 126, 126, 0.22);
+    transform: translate(0,-3px);
+    transition: all .3s ease;
   }
