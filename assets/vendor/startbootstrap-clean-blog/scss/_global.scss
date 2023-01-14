@@ -1002,6 +1002,26 @@ img::-moz-selection {
   margin-left: 20px;
 }
 
+.chooseBut{
+  width: 50px;
+  height: 80px;
+  background-color: rgba(0,0,0,0.2);
+  color: #fff;
+  font-size: 30px;
+  line-height: 80px;
+  text-align: center;
+  display: none;
+}
+#left{
+  position: absolute;
+  left: 0px;
+  top: 130px;
+}
+#right{
+  position: absolute;
+  right: 0px;
+  top: 130px;
+}
 
 @media (max-width: 768px) {
   .img-responsive{

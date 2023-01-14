@@ -3,10 +3,30 @@ layout: default
 ---
 
 <body>
+  
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 mx-auto">
-        <h1><br><br><br>Welcome to <span style="color: rgb(173, 32, 60);">W</span>ireless Sig<span style="color: rgb(173, 32, 60);">na</span>l Learnin<span style="color: rgb(173, 32, 60);">g Lab</span></h1>
+        <br><br><br>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./img/map.png" style="width: 100%;"></div>
+              <div class="swiper-slide"><img src="./img/background.png" style="width: 100%;"></div>
+          </div>
+          
+          <!-- 如果需要导航按钮 -->
+          <div class="swiper-button-prev" style="color: black;"></div>
+          <div class="swiper-button-next"></div>
+          
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mx-auto">
+        <h1>Welcome to <span style="color: rgb(173, 32, 60);">W</span>ireless Sig<span style="color: rgb(173, 32, 60);">na</span>l Learnin<span style="color: rgb(173, 32, 60);">g Lab</span></h1>
       </div>
         <div class="col-lg-6 col-md-6 mx-auto" style="margin-top: 10px;" >
             <p  class="col-lg-12" style="background-color: #f5f5f5;padding: 6px;">Welcome to WANGLab, in the <span style="color: rgb(184, 27, 58);">Department of Computer and Information Sciences </span>at Temple University. Our research focuses on <span style="color: rgb(184, 27, 58);">Mobile Sensing</span>, <span style="color: rgb(184, 27, 58);">Internet of Things</span>, <span style="color: rgb(184, 27, 58);">Cyber Security and Privacy</span>, <span style="color: rgb(184, 27, 58);">Artificial Intelligence</span> and <span style="color: rgb(184, 27, 58);">Sotfware & Hareware Co-Design</span>. Our research is supported by the National Science Foundation (NSF).</p>
@@ -43,3 +63,16 @@ layout: default
 
 
 </body>
+<script>        
+  var mySwiper = new Swiper ('.swiper', {
+    loop: true, // 循环模式选项
+    
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+  })        
+  </script>
