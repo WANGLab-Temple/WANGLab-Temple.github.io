@@ -13,7 +13,7 @@
   }
   .news-arrow {
     text-align: right;
-    display: inline-block;
+    display: none;
     float: right;
     color: #b60000;
     font-size: 2.5rem;
@@ -21,7 +21,7 @@
 }
 .news-arrow-down{
     text-align: right;
-    display: none;
+    display: inherit;
     float: right;
     color: #b60000;
     font-size: 2.5rem;
@@ -62,5 +62,5 @@ a:hover{
 
 }
 .news-text{
-    display: none;
+    display: inherit;
 }

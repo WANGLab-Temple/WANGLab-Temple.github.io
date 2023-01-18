@@ -1,0 +1,135 @@
+---
+layout: default
+---
+
+<body>
+  
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 mx-auto">
+            <br><br><br><br>
+          <a href="{{page.nsf}}"><div class="grant-title">{{page.title}}</div></a>
+        <hr class="star-primary">
+        <div class="grant-subtitle">
+            Synopsis:
+        </div>
+        
+    </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+          <div class="col-lg-4 col-md-6 mx-auto">
+            <a href="{{page.img}}">
+                <img src={{page.img}} class="img-grant"></a>
+            </div>
+            <div class="col-lg-8 col-md-6 mx-auto" style="text-align: justify;">
+              <div class='grant-p'>
+          {{page.Synopsis}}
+        </div>
+        <div class='grant-p' style="color: rgb(39, 62, 163);margin-top: 10px;">
+          {{page.Synopsis2}}
+        </div>
+        </div>
+        <div class="col-lg-12 col-md-12 mx-auto">
+          <div class="grant-subtitle">
+            Personnel:
+        </div>
+        <ul>
+          <li>
+        <div class='grant-p'>
+        <span style="text-decoration:underline;color:rgb(46, 76, 116) ;">Students</span>: {{page.Students}}
+        </div>
+      </li>
+      <li>
+        <div class='grant-p' style="margin-top: 10px;">
+          <span style="text-decoration:underline;color:rgb(46, 76, 116) ;">PI</span>: {{page.PI}}
+          </div>
+        </li>
+        
+      </ul>
+        <div class="grant-subtitle">
+          Collaborators:
+      </div>
+      <ul>
+        <li>
+      <div class='grant-p'>
+      <span style="text-decoration:underline;color:rgb(46, 76, 116) ;">Students</span>: {{page.Collaborators}}
+      </div>
+    </li>
+    </ul>
+
+    <div class="grant-subtitle">
+      Publications:
+  </div>
+  <ul>
+    <li>
+  <div class='grant-p'>
+  {{page.Authors[0]}}<a href='{{page.link[0]}}'><em style="color: rgb(182, 42, 42)"> {{page.Publications[0]}}</em></a><span style="color: rgb(40, 88, 150)"> {{page.Conference[0]}}</span>
+  </div>
+</li>
+
+{% if page.list[1]==1 %}
+<li>
+  <div class='grant-p'>
+    {{page.Authors[1]}}<a href='{{page.link[1]}}'><em style="color: rgb(182, 42, 42)"> {{page.Publications[1]}}</em></a><span style="color: rgb(40, 88, 150)"> {{page.Conference[1]}}</span>
+    </div>
+</li>
+{% endif %}
+{% if page.list[2]==1 %}
+<li>
+  <div class='grant-p'>
+    {{page.Authors[2]}}<a href='{{page.link[2]}}'><em style="color: rgb(182, 42, 42)"> {{page.Publications[2]}}</em></a><span style="color: rgb(40, 88, 150)"> {{page.Conference[2]}}</span>
+    </div>
+</li>
+{% endif %}
+{% if page.list[3]==1 %}
+<li>
+  <div class='grant-p'>
+    {{page.Authors[3]}}<a href='{{page.link[3]}}'><em style="color: rgb(182, 42, 42)"> {{page.Publications[3]}}</em></a><span style="color: rgb(40, 88, 150)"> {{page.Conference[3]}}</span>
+    </div>
+</li>
+{% endif %}
+{% if page.list[4]==1 %}
+<li>
+  <div class='grant-p'>
+    {{page.Authors[4]}}<a href='{{page.link[4]}}'><em style="color: rgb(182, 42, 42)"> {{page.Publications[4]}}</em></a><span style="color: rgb(40, 88, 150)"> {{page.Conference[4]}}</span>
+    </div>
+</li>
+{% endif %}
+{% if page.list[5]==1 %}
+<li>
+  <div class='grant-p'>
+    {{page.Authors[5]}}<a href='{{page.link[5]}}'><em style="color: rgb(182, 42, 42)"> {{page.Publications[5]}}</em></a><span style="color: rgb(40, 88, 150)"> {{page.Conference[5]}}</span>
+    </div>
+</li>
+{% endif %}
+</ul>
+<div class="grant-subtitle">
+  Duration:
+</div>
+<ul>
+  <li>
+<div class='grant-p'>
+<span style="text-decoration:underline;color:rgb(46, 76, 116) ;">Start Date</span>: {{page.start}}
+</div>
+</li>
+<li>
+<div class='grant-p' style="margin-top: 10px;">
+  <span style="text-decoration:underline;color:rgb(46, 76, 116) ;">End Date</span>: {{page.end}}
+  </div>
+</li>
+
+</ul>
+<div class="grant-subtitle">
+  Supported by:
+</div>
+<a href='{{page.nsf}}'><img src="../img/NSF.png" style="max-width: 100px;margin-bottom: 30px;margin-top: 10px;">
+
+        </div>
+    </div>
+</div>
+</body>
+<script>
+  console.log( {{page.Publications}});
+</script>

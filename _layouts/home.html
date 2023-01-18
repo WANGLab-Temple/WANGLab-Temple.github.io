@@ -4,35 +4,24 @@ layout: default
 
 <body>
   
-  <div class="container">
+
+  <div class="container" style="margin-top: 100px;">
     <div class="row">
       <div class="col-lg-12 col-md-12 mx-auto">
-        <br><br><br>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="./img/map.png" style="width: 100%;"></div>
-              <div class="swiper-slide"><img src="./img/background.png" style="width: 100%;"></div>
-          </div>
-          
-          <!-- 如果需要导航按钮 -->
-          <div class="swiper-button-prev" style="color: black;"></div>
-          <div class="swiper-button-next"></div>
-          
+        <h1 style="font-size:38px; font-family:Arial, Helvetica, sans-serif;">Introduction</span></h1>
       </div>
-      </div>
-    </div>
-  </div>
+        <div class="col-lg-8 col-md-auto mx-auto" style="margin-top: 10px;" >
+        <div  class="grant-p" style="font-size: 21px;">Welcome to WANGLab, in the <a href='https://cis.temple.edu/' style="color: rgb(184, 27, 58);">Department of Computer and Information Sciences</a> at Temple University. We foster an open, motivated, creative, and team-oriented culture in our group. Welcome all scholars and students to join our lab. </div>
+        <h1 style="font-size:38px; font-family:Arial, Helvetica, sans-serif;margin-top: 30px;margin-bottom: 20px;">Research</span></h1>
+        <div  class="grant-p" style="font-size: 21px;">Our research focuses on <span style="color: rgb(184, 27, 58);">Mobile Sensing</span>, <span style="color: rgb(184, 27, 58);">Internet of Things</span>, <span style="color: rgb(184, 27, 58);">Cyber Security and Privacy</span>, <span style="color: rgb(184, 27, 58);">Artificial Intelligence</span> and <span style="color: rgb(184, 27, 58);">Sotfware & Hareware Co-Design</span>. Our work is motivated by a wide variety of engineering and applications.</div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 mx-auto">
-        <h1>Welcome to <span style="color: rgb(173, 32, 60);">W</span>ireless Sig<span style="color: rgb(173, 32, 60);">na</span>l Learnin<span style="color: rgb(173, 32, 60);">g Lab</span></h1>
-      </div>
-        <div class="col-lg-6 col-md-6 mx-auto" style="margin-top: 10px;" >
-            <p  class="col-lg-12" style="background-color: #f5f5f5;padding: 6px;">Welcome to WANGLab, in the <span style="color: rgb(184, 27, 58);">Department of Computer and Information Sciences </span>at Temple University. Our research focuses on <span style="color: rgb(184, 27, 58);">Mobile Sensing</span>, <span style="color: rgb(184, 27, 58);">Internet of Things</span>, <span style="color: rgb(184, 27, 58);">Cyber Security and Privacy</span>, <span style="color: rgb(184, 27, 58);">Artificial Intelligence</span> and <span style="color: rgb(184, 27, 58);">Sotfware & Hareware Co-Design</span>. Our research is supported by the National Science Foundation (NSF).</p>
+        <h1 style="font-size:38px; font-family:Arial, Helvetica, sans-serif;margin-top: 30px;margin-bottom: 20px;">Supported By</span></h1>
+        <figure class="image is-8by3 ">
+          <img src="https://web.northeastern.edu/smilelab/wp-content/uploads/2014/12/NSF_150.png" />
+      </figure>
       </div>
 
-      <div class="col-lg-6 col-md-6 mx-auto" style="margin-top: 10px;"> 
+      <div class="col-lg-4 col-md-auto mx-auto" style="margin-top: 10px;"> 
         <figure class="image is-3by2" style="display:block;">
           <img src="{{ site.baseurl }}/img/bg-post.jpg" draggable="false" width=100% alt=""/>
         </figure>  
@@ -42,27 +31,8 @@ layout: default
   </div>
 
 
-  <section class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 mx-auto">
-          <h1><br>Featured Publications</h1>
-          <div class="columns is-desktop is-mobile">
-                <div class="column">
-                    <a href="">
-                        <figure class="image is-8by3 ">
-                            <img src="https://web.northeastern.edu/smilelab/wp-content/uploads/2014/12/NSF_150.png" />
-                        </figure>
-                    </a>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
 </body>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script>        
   var mySwiper = new Swiper ('.swiper', {
     loop: true, // 循环模式选项
@@ -74,5 +44,15 @@ layout: default
       prevEl: '.swiper-button-prev',
     },
     
-  })        
-  </script>
+    autoplay: {
+      delay:20000,
+    }
+  });
+  $('.swiper-slide').mouseenter(function() {
+    mySwiper.autoplay.stop();
+})
+// 鼠标移出开始自动滚动
+$('.swiper-slide').mouseleave(function() {
+    mySwiper.autoplay.start();
+})
+</script>
