@@ -35,9 +35,6 @@
     vertical-align: -0.125em;
     margin-right: 20px;
 }
-a:hover{
-    color: red($color: #000000) !important;
-}
 .news-p{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-weight: 500;
@@ -48,6 +45,7 @@ a:hover{
     color: #504c4c;
     text-align: justify;
 }
+
 
 @media (max-width: 640px) {
     .news-p{
