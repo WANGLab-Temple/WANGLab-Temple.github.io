@@ -331,11 +331,10 @@ for(var i = 0; i < label.length; i++){
 
             state.category = label[j].id;
             console.log(state.category);
-            renderPageBySelect(arr,state.category,year.value,topic.value);
+            renderPageBySelect(arr,state.category,'Year','Topic');
+            syear.options[0].selected=true
+            stopic.options[0].selected=true
             console.log(arr);
-            // var newArr = screenSelect(arr, state.category); //筛选性别执行后返回新数组
-            // console.log(newArr);
-            // renderPage( screenInput(newArr, state.text));//利用新数组再次筛选搜索框，筛选后渲染页面
         }
     })(i)
 }

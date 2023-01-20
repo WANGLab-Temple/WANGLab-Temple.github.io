@@ -13,7 +13,7 @@
   }
   .news-arrow {
     text-align: right;
-    display: none;
+    display: inherit;
     float: right;
     color: #b60000;
     font-size: 2.5rem;
@@ -21,7 +21,7 @@
 }
 .news-arrow-down{
     text-align: right;
-    display: inherit;
+    display: none;
     float: right;
     color: #b60000;
     font-size: 2.5rem;
@@ -46,6 +46,9 @@
     text-align: justify;
 }
 
+.news-text{
+    display: none;
+}
 
 @media (max-width: 640px) {
     .news-p{
@@ -58,7 +61,4 @@
         margin-top: 10px !important;
     }
 
-}
-.news-text{
-    display: inherit;
 }
